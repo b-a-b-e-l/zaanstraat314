@@ -54,6 +54,7 @@ tr:last-child td { border-bottom: none; }
 .closing-page { background: #2c2c2c; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .closing-page h1 { font-family: 'Playfair Display', serif; color: #faf8f4; font-size: 30px; margin-bottom: 12px; }
 .closing-divider { width: 40px; height: 1px; background: #8fb8a8; margin: 20px auto; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 @media print { body { background: white; } .page { margin: 0; page-break-after: always; } }
 </style>
 </head>
@@ -693,6 +694,23 @@ tr:last-child td { border-bottom: none; }
       </ul>
     </div>
   </div>
+
+  <!-- Download block -->
+  <div style="margin: 18px 0 32px 0; padding: 16px 20px; background:#edf4f0; border-left:3px solid #8fb8a8; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <div>
+      <div style="font-family:'Lato',sans-serif; font-size:8px; letter-spacing:2px; text-transform:uppercase; color:#8fb8a8; margin-bottom:4px; font-weight:400;">Documento allegato</div>
+      <div style="font-family:'Libre Baskerville',serif; font-size:13px; color:#2c2c2c;">Questions for Edwin — 70 domande complete</div>
+      <div style="font-family:'Lato',sans-serif; font-size:10px; color:#8fb8a8; margin-top:5px; font-style:italic; font-weight:400; animation: pulse 1.8s ease-in-out infinite;">per favore stampare, mi amorcito ♡</div>
+    </div>
+    <a href="questions_for_edwin.pdf" download style="
+      font-family:'Lato',sans-serif; font-size:9px; letter-spacing:2px;
+      text-transform:uppercase; padding:11px 20px;
+      background:#2c2c2c; color:#faf8f4; text-decoration:none;
+      display:flex; align-items:center; gap:8px; white-space:nowrap; font-weight:300;">
+      <span style="color:#8fb8a8; font-size:13px;">↓</span> Scarica PDF
+    </a>
+  </div>
+
   <div class="footer"><span>Zaanstraat 314 · Piano Strategico</span><span>Domande per Edwin</span><span>17 / 20</span></div>
 </div>
 
@@ -861,17 +879,6 @@ tr:last-child td { border-bottom: none; }
     </div>
   </div>
 </div>
-
-<!-- DOWNLOAD BUTTON -->
-<a href="questions_for_edwin.pdf" download style="
-  position:fixed; bottom:28px; left:28px; z-index:999;
-  background:#8fb8a8; color:#2c2c2c; text-decoration:none;
-  padding:13px 22px; font-family:'Lato',sans-serif;
-  font-size:9px; letter-spacing:2px; text-transform:uppercase;
-  box-shadow:0 4px 20px rgba(143,184,168,0.45);
-  display:flex; align-items:center; gap:9px; font-weight:400;">
-  <span style="font-size:15px;">↓</span> Questions for Edwin
-</a>
 
 <!-- FLOATING BUTTON -->
 <button onclick="openFeedback()" id="feedback-btn" style="
